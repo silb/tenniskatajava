@@ -4,4 +4,6 @@ My attempt at a Java implementation of the tennis kata described at
 As an additional exercise, this implementation consists solely of immutable
 objects.
 
+I wrote this code while preparing to be an instructor at the code dojo.
+
 2010-10-13 Stig Inge Lea Bjørnsen <stig-inge-lea.bjornsen@capgemini.com>
