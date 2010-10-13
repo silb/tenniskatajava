@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Game {
     
-    private Score initialScore;
-    private PrintWriter out;
+    private final Score initialScore;
+    private final PrintWriter out;
 
     public Game(PrintWriter out) {
         super();
