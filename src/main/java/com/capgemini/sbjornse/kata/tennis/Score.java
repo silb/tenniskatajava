@@ -3,9 +3,8 @@ package com.capgemini.sbjornse.kata.tennis;
 /**
  * The score of a tennis player.
  * <p/>
- * Note that there is not explicit ordering of
- * the scores. Instead, each score only knows the next value of a player's score
- * after a win or a loss.
+ * Note that there is no explicit ordering of the scores. Instead, each score
+ * only knows the next value of a player's score after a win or a loss.
  */
 public class Score {
     final String label;
