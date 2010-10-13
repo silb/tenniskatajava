@@ -1,0 +1,7 @@
+My attempt at a Java implementation of the tennis kata described at
+<http://codingdojo.org/cgi-bin/wiki.pl?KataTennis>.
+
+As an additional exercise, this implementation consists solely of immutable
+objects.
+
+2010-10-13 Stig Inge Lea Bjørnsen <stig-inge-lea.bjornsen@capgemini.com>
