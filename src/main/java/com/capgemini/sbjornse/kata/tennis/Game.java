@@ -8,9 +8,9 @@ public class Game {
     private Score initialScore;
     private PrintWriter out;
 
-    public Game(Score initialScore, PrintWriter out) {
+    public Game(PrintWriter out) {
         super();
-        this.initialScore = initialScore;
+        this.initialScore = Rules.assemble();
         this.out = out;
     }
 
@@ -32,6 +32,6 @@ public class Game {
     }
     
     public static void main(String[] args) {
-        new Game(Rules.assemble(), new PrintWriter(System.out)).start();
+        new Game(new PrintWriter(System.out)).start();
     }
 }

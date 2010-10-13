@@ -10,9 +10,9 @@ public class Round {
     private final Player playerA;
     private final Player playerB;
     
-    public final static class EndRound extends Round {
+    public static final class FinalRound extends Round {
         
-        public EndRound(Player playerA, Player playerB) {
+        public FinalRound(Player playerA, Player playerB) {
             super(playerA, playerB);
         }
 
@@ -42,6 +42,11 @@ public class Round {
     }
 
     
+    /**
+     * Play this round
+     * 
+     * @return the next round
+     */
     Round play() {
         boolean winnerIsPlayerA = randomSource.nextBoolean();
         
@@ -56,15 +61,15 @@ public class Round {
             looser = new Player(playerA, playerA.score.lost());
         }
         
-        return gameFinished(winner.score, looser.score) ? new EndRound(winner, looser) : new Round(randomSource, winner, looser);
+        return gameContinues(winner.score, looser.score) ? new Round(randomSource, winner, looser) : new FinalRound(winner, looser);
     }
 
     boolean isPlayable() {
         return true;
     }
     
-    private static boolean gameFinished(Score a, Score b) {
-        return a.isWinningScore() || b.isWinningScore();
+    private static boolean gameContinues(Score a, Score b) {
+        return !a.isWinningScore() &&  !b.isWinningScore();
     }
     
     @Override
